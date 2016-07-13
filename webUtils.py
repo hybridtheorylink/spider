@@ -19,7 +19,7 @@ def getPageNodes(url,timeout=5,encoding=None):
 def getHyperLinks(nodes):
     if(nodes is not None):return nodes.xpath('//a/@href')
     return []
-#为./ 与 / 添加parent路径
+#为"./"与"/"添加parent路径
 def adjustUrl(parent,url):
     if(url=='' or url is None):return None
     if(url.startswith('http')):return url
